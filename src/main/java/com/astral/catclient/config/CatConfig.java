@@ -23,10 +23,10 @@ public class CatConfig {
             .resolve("astralcatclient.json");
 
     public boolean enabled = true;
-    public double spawnRate = 0.35;      // average new cats per tick (0.0 - 3.0)
+    public double spawnRate = 0.0025;   // subtle: roughly one cat every 8 seconds
     public double fallSpeed = 1.0;       // multiplier on base fall speed
     public double catScale = 1.0;        // multiplier on base cat size
-    public int maxCats = 150;            // hard cap so it never tanks FPS
+    public int maxCats = 3;              // keep the title screen uncluttered
     public boolean onTitleScreen = true;
     public boolean onPauseScreen = true;
     public boolean showHud = true;
