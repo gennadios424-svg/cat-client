@@ -2,7 +2,8 @@
   "schemaVersion": 1,
   "id": "astralcatclient",
   "version": "${version}",
-  "name": "Cat Client",
+  "name": "Cat Client 1.21.1",
+  "icon": "assets/astralcatclient/icon.png",
   "description": "Cat Client 1.21.1: a cosmetic client-side Minecraft experience with the CattyCraft theme, Kitty Menu, and optional FPS, keystrokes, and CPS HUD.",
   "authors": [
     "You"
