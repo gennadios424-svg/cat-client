@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "astralcatclient",
+  "version": "${version}",
+  "name": "Astral Cat Client",
+  "description": "Purely cosmetic client-side mod: it rains cats on the title and pause menu screens.",
+  "authors": [
+    "You"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": null,
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.astral.catclient.AstralCatClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
