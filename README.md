@@ -126,3 +126,8 @@ reopen the file after first launch so defaults exist):
   denser blizzard of cats.
 - `fallSpeed` / `catScale` — multipliers, `1.0` is the default.
 - `maxCats` — hard ceiling so it can't eat your framerate.
+
+
+## Christmas Cat Edition
+
+The title and pause menus feature a subtle winter-sky tint, animated pixel snow, festive falling cats, and icy cat-ear frames around menu buttons. These are client-side visual effects only.
