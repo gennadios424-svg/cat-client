@@ -45,10 +45,10 @@ public final class CattyHud {
         int x = 7;
         int y = 7;
         int line = 12;
-        context.fill(x - 4, y - 4, x + 112, y + 5 * line + 3, 0x88321F3D);
+        context.fill(x - 4, y - 4, x + 160, y + 5 * line + 3, 0x88321F3D);
         context.fill(x - 4, y - 4, x + 112, y - 2, 0xFFFFB8D8);
 
-        context.drawText(client.textRenderer, Text.literal("♡ CAT CLIENT ♡"), x, y, 0xFFFFCBE5, true);
+        context.drawText(client.textRenderer, Text.literal("♡ CAT CLIENT 1.21.1 ♡"), x, y, 0xFFFFCBE5, true);
         y += line + 2;
         if (cfg.showFps) {
             context.drawText(client.textRenderer, Text.literal("FPS  " + client.getCurrentFps()), x, y, 0xFFEAF8FF, true);
