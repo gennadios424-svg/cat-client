@@ -41,7 +41,7 @@ public class AstralCatClient implements ClientModInitializer {
             while (kittyMenuKey.wasPressed()) {
                 if (client.currentScreen instanceof CattyMenuScreen) {
                     client.setScreen(null);
-                } else if (client.currentScreen == null) {
+                } else {
                     client.setScreen(new CattyMenuScreen());
                 }
             }
