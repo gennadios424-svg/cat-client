@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "astralcatclient",
   "version": "${version}",
-  "name": "Astral Cat Client",
-  "description": "Purely cosmetic client-side mod: it rains cats on the title and pause menu screens.",
+  "name": "Cat Client",
+  "description": "Cat Client 1.21.1: a cosmetic client-side Minecraft experience with the CattyCraft theme, Kitty Menu, and optional FPS, keystrokes, and CPS HUD.",
   "authors": [
     "You"
   ],
