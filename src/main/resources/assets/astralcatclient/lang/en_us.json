@@ -1,4 +1,5 @@
 {
-  "key.category.astralcatclient": "Astral Cat Client",
-  "key.astralcatclient.toggle": "Toggle Cat Rain"
+  "key.category.astralcatclient": "Cat Client",
+  "key.astralcatclient.toggle": "Toggle CattyCraft visuals",
+  "key.astralcatclient.kitty_menu": "Open Kitty Menu"
 }
