@@ -55,7 +55,7 @@ public class AstralCatClient implements ClientModInitializer {
             }
             ScreenEvents.afterRender(screen).register((s, context, mouseX, mouseY, tickDelta) -> {
                 MinecraftClient mc = MinecraftClient.getInstance();
-                overlay.renderAndTick(context, mc.getWindow().getScaledWidth(), mc.getWindow().getScaledHeight());
+                overlay.renderAndTick(context, screen, mc.getWindow().getScaledWidth(), mc.getWindow().getScaledHeight());
             });
             ScreenEvents.remove(screen).register(s -> overlay.clear());
         });
