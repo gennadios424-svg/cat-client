@@ -31,6 +31,9 @@ public class CatRainOverlay {
         for (FallingCat cat : cats) cat.render(context);
 
         drawSnow(context, screenWidth, screenHeight);
+        drawGarland(context, screenWidth);
+        drawTwinkleStars(context, screenWidth, screenHeight);
+        drawPresentCorners(context, screenWidth, screenHeight);
         drawCatButtons(context, screen);
     }
 
@@ -52,6 +55,63 @@ public class CatRainOverlay {
                 context.fill(x + 1, y - 2, x + 2, y + s + 2, color);
             }
         }
+    }
+
+
+    private void drawGarland(DrawContext context, int width) {
+        // A slim holly garland hugs the very top edge so it avoids menu labels.
+        for (int x = 0; x < width; x += 8) {
+            int y = 7 + (int) (Math.sin((x + frame * 0.35) * 0.035) * 3.0);
+            context.fill(x, y, x + 9, y + 2, 0xFF28784D);
+            if (x % 24 == 0) {
+                context.fill(x + 2, y - 2, x + 5, y + 1, 0xFF3FAF68);
+                context.fill(x + 5, y - 2, x + 8, y + 1, 0xFF3FAF68);
+                context.fill(x + 4, y - 4, x + 6, y - 1, 0xFFBCEBCE);
+            }
+        }
+
+        // Alternating tiny bulbs gently pulse between warm holiday colours.
+        int[] bulbs = {0xFFFF6B78, 0xFFFFD66B, 0xFF82CFFF, 0xFF65D68A};
+        for (int x = 12; x < width; x += 22) {
+            int y = 9 + (int) (Math.sin((x + frame * 0.35) * 0.035) * 3.0);
+            int color = bulbs[Math.floorMod((x / 22) + (int) (frame / 8), bulbs.length)];
+            context.fill(x, y + 2, x + 4, y + 6, color);
+            context.fill(x + 1, y + 1, x + 3, y + 7, color);
+        }
+    }
+
+    private void drawTwinkleStars(DrawContext context, int width, int height) {
+        for (int i = 0; i < 14; i++) {
+            int x = Math.floorMod(i * 137 + 31, Math.max(1, width));
+            int y = 22 + Math.floorMod(i * 71, Math.max(1, height - 22));
+            int pulse = (int) ((Math.sin(frame * 0.12 + i * 1.7) + 1.0) * 1.5);
+            int center = Math.max(1, 2 + pulse);
+            int color = (i % 2 == 0) ? 0xBFFFFFFF : 0xAFFFF0B5;
+            context.fill(x - center, y, x + center + 1, y + 1, color);
+            context.fill(x, y - center, x + 1, y + center + 1, color);
+            if (pulse > 1) {
+                context.fill(x - 1, y - 1, x + 2, y + 2, 0x70FFFFFF);
+            }
+        }
+    }
+
+    private void drawPresentCorners(DrawContext context, int width, int height) {
+        // Small pixel presents sit in the bottom corners, clear of the menu.
+        drawPresent(context, 8, height - 17, 0xFFCC4358, 0xFFFFD66B);
+        drawPresent(context, Math.max(8, width - 24), height - 14, 0xFF28784D, 0xFFEAF8FF);
+        // A soft snowbank along the bottom edge.
+        context.fill(0, height - 2, width, height, 0xBFEAF8FF);
+        context.fill(18, height - 4, 35, height - 2, 0xAFFFFFFF);
+        context.fill(Math.max(0, width - 52), height - 5, Math.max(0, width - 29), height - 2, 0xAFFFFFFF);
+    }
+
+    private void drawPresent(DrawContext context, int x, int y, int box, int ribbon) {
+        context.fill(x, y + 4, x + 15, y + 15, box);
+        context.fill(x + 6, y + 4, x + 9, y + 15, ribbon);
+        context.fill(x, y + 8, x + 15, y + 10, ribbon);
+        context.fill(x + 3, y + 1, x + 7, y + 5, ribbon);
+        context.fill(x + 8, y + 1, x + 12, y + 5, ribbon);
+        context.fill(x + 6, y + 1, x + 9, y + 4, box);
     }
 
     private void drawCatButtons(DrawContext context, Screen screen) {
