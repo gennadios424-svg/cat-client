@@ -28,7 +28,11 @@ public class CatConfig {
     public double catScale = 1.0;        // multiplier on base cat size
     public int maxCats = 150;            // hard cap so it never tanks FPS
     public boolean onTitleScreen = true;
-    public boolean onPauseScreen = true;\n    public boolean showHud = true;\n    public boolean showFps = true;\n    public boolean showKeystrokes = true;\n    public boolean showCps = true;
+    public boolean onPauseScreen = true;
+    public boolean showHud = true;
+    public boolean showFps = true;
+    public boolean showKeystrokes = true;
+    public boolean showCps = true;
 
     public static CatConfig INSTANCE = load();
 
