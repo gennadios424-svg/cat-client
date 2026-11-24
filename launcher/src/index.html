@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Client</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">C</div><div><strong>CAT CLIENT</strong><small>VERSION 1.21.1</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <button class="nav active"><span>▦</span> Overview</button>
+    <button class="nav" id="nav-settings"><span>⚙</span> Settings</button>
+    <div class="sidebar-bottom"><div class="status-dot"></div><span>Launcher preview</span><span class="build">v1.0</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb">CAT CLIENT <span>/</span> OVERVIEW</div><button class="account" id="login"><span class="avatar">?</span><span id="account-label">Sign in with Microsoft</span><span class="chevron">↗</span></button></header>
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><i></i> YOUR MINECRAFT, YOUR WAY</div><h1>Ready to<br><em>play?</em></h1><p>A clean, dedicated home for your Minecraft 1.21.1 setup.</p>
+      <div class="hero-actions"><button class="play" id="play"><span>▶</span> PLAY CAT CLIENT</button><button class="secondary" id="open-folder">Game folder ↗</button></div>
+      <div class="launch-status" id="status">Launcher foundation ready · Sign-in and game installation are next</div></div>
+      <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="cat-logo"><div class="ears"></div><div class="cat-face"><i></i><i></i><b></b></div></div><div class="art-tag">CC / 21.1</div></div>
+    </section>
+    <section class="section-head"><div><div class="eyebrow">YOUR SETUP</div><h2>Instance overview</h2></div><span class="isolated"><i></i> ISOLATED INSTANCE</span></section>
+    <section class="cards">
+      <article class="info-card"><div class="card-icon">▣</div><div class="card-label">GAME VERSION</div><div class="card-value">1.21.1</div><div class="card-note">Minecraft Java Edition</div></article>
+      <article class="info-card"><div class="card-icon">⌘</div><div class="card-label">MOD LOADER</div><div class="card-value">Fabric</div><div class="card-note">Dedicated Cat Client profile</div></article>
+      <article class="info-card"><div class="card-icon">◫</div><div class="card-label">MEMORY ALLOCATION</div><div class="card-value"><span id="ram-value">4</span> GB</div><div class="card-note">Adjust in launcher settings</div></article>
+    </section>
+    <section class="bottom-row"><div class="folder-panel"><div><div class="eyebrow">SEPARATE FROM VANILLA</div><h3>Your files stay yours.</h3><p>Cat Client uses its own saves, mods, resource packs and settings. Your regular Minecraft installation is left untouched.</p></div><button class="text-button" id="open-folder-2">OPEN INSTANCE FOLDER ↗</button></div><div class="settings-panel" id="settings-panel"><div class="eyebrow">QUICK SETTINGS</div><label for="ram">Memory allocation <strong><span id="ram-label">4</span> GB</strong></label><input id="ram" type="range" min="2" max="8" value="4"><div class="range-labels"><span>2 GB</span><span>8 GB</span></div><button class="save" id="save">SAVE SETTINGS</button></div></section>
+    <footer><span>CAT CLIENT <b>•</b> MINECRAFT 1.21.1</span><span>Built for your own instance</span></footer>
+  </main>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>
